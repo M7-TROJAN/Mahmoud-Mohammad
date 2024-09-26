@@ -305,41 +305,7 @@
     </footer>
     <!-- End Footer -->
 
-    <!-- script to handle the dynamic-text in the header -->
-    <script>
-        // Typing Animation
-        var options = {
-            strings: ["Full-Stack Web Developer", "Back-End Developer", "Script Writer"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            backDelay: 2000, 
-            loop: true,
-        };
-        var typed = new Typed(".dynamic-text", options);
-    </script>
-
-    <!-- script to handle form submission -->
-    <script>
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent default form submission
-            const form = this;
-            const data = new FormData(form);
-    
-            fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    alert('Thank you for your message!');
-                    form.reset(); // Clear the form fields after submission
-                } else {
-                    alert('Oops! There was a problem.');
-                }
-            }).catch(() => alert('Error! Please try again later.'));
-        });
-    </script>
+    <!-- main script -->
+    <script src="script.js"></script>
 </body>
 </html>
